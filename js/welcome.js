@@ -35,7 +35,7 @@ if (check) {
   check = false;
   question(
     "What is the name of their last album?",
-    "BORN PINK",
+    "BORN PINK" && "born pink",
     "Good!, you can get in"
   );
 }
@@ -46,7 +46,7 @@ if (check) {
   );
   while (menu != "a" && menu != "A") {
     switch (menu) {
-      case "b":
+      case "b" && "B":
         let score = 0;
 
         let questionOne = "What do you prefer, cold or hot?";
@@ -84,7 +84,7 @@ if (check) {
         }
 
         break;
-      case "c":
+      case "c" && "C":
         const bpSongs = [
           {
             name: "Lovesick Girls",
@@ -144,7 +144,7 @@ if (check) {
         let level = prompt(
           "which level you think this song has? Type a number from 1 to 10"
         );
-        let newSong = { name, album, year, level };
+        let newSong = { name, album, year, level: parseInt(level) };
         bpSongs.push(newSong);
 
         for (const song of bpSongs) {
